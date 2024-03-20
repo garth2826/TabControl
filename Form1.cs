@@ -7,14 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
 using System.IO;
 using System.Security.Cryptography;
-using System.Text;
+
 
 
 namespace WindowsFormsApp1
 {
+
+    public partial class FormGarthIPInfoSearch : System.Windows.Forms.Form
+    {
+
+        public FormGarthIPInfoSearch()
+        {
+            InitializeComponent();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TabIPInfoSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTestEncryption_Click(object sender, EventArgs e)
+        {
+            var MySecretKey = "b14ca5898a4e413asbce2ea2315a1916";
+
+            var encryptedString = AesOperation.EncryptString(MySecretKey, textBoxUserInputForEncryption.Text);
+
+
+            var decryptedString = AesOperation.DecryptString(MySecretKey, encryptedString);
+        }
+
+        private void textBoxResultOfDecryption_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+
+
     public class AesOperation
     {
         public static string EncryptString(string key, string plainText)
@@ -70,32 +106,6 @@ namespace WindowsFormsApp1
             }
         }
     }
-    public partial class FormGarthIPInfoSearch : System.Windows.Forms.Form
-    {
-
-        public FormGarthIPInfoSearch()
-        {
-            InitializeComponent();
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TabIPInfoSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonTestEncryption_Click(object sender, EventArgs e)
-        {
-            var MySecretKey = "b14ca5898a4e413asbce2ea2315a1916";
-
-            var encryptedString = AesOperation.EncryptString(MySecretKey, textBoxUserInputForEncryption.Text);
-            
-
-            var decryptedString = AesOperation.DecryptString(MySecretKey, encryptedString);
-        }
-    }
+   
 }
+   

@@ -32,15 +32,15 @@
             this.TabIPInfoSearch = new System.Windows.Forms.TabPage();
             this.ButtonIPInfoSearch = new System.Windows.Forms.Button();
             this.TabEncryptionTest = new System.Windows.Forms.TabPage();
+            this.textBoxResultOfDecryption = new System.Windows.Forms.TextBox();
+            this.textBoxResultOfEncryption = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxUserInputForEncryption = new System.Windows.Forms.TextBox();
+            this.buttonTestEncryption = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonTestEncryption = new System.Windows.Forms.Button();
-            this.textBoxUserInputForEncryption = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxResultOfEncryption = new System.Windows.Forms.TextBox();
-            this.textBoxResultOfDecryption = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.TabIPInfoSearch.SuspendLayout();
             this.TabEncryptionTest.SuspendLayout();
@@ -49,6 +49,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.TabIPInfoSearch);
             this.tabControl1.Controls.Add(this.TabEncryptionTest);
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -98,6 +101,68 @@
             this.TabEncryptionTest.Text = "Encryption Test";
             this.TabEncryptionTest.UseVisualStyleBackColor = true;
             // 
+            // textBoxResultOfDecryption
+            // 
+            this.textBoxResultOfDecryption.Location = new System.Drawing.Point(254, 203);
+            this.textBoxResultOfDecryption.Name = "textBoxResultOfDecryption";
+            this.textBoxResultOfDecryption.Size = new System.Drawing.Size(172, 22);
+            this.textBoxResultOfDecryption.TabIndex = 6;
+            this.textBoxResultOfDecryption.TextChanged += new System.EventHandler(this.textBoxResultOfDecryption_TextChanged);
+            // 
+            // textBoxResultOfEncryption
+            // 
+            this.textBoxResultOfEncryption.Location = new System.Drawing.Point(254, 150);
+            this.textBoxResultOfEncryption.Name = "textBoxResultOfEncryption";
+            this.textBoxResultOfEncryption.Size = new System.Drawing.Size(172, 22);
+            this.textBoxResultOfEncryption.TabIndex = 5;
+            this.textBoxResultOfEncryption.Text = "result";
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Location = new System.Drawing.Point(6, 179);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 29);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(6, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(252, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // textBoxUserInputForEncryption
+            // 
+            this.textBoxUserInputForEncryption.Location = new System.Drawing.Point(254, 100);
+            this.textBoxUserInputForEncryption.Name = "textBoxUserInputForEncryption";
+            this.textBoxUserInputForEncryption.Size = new System.Drawing.Size(172, 22);
+            this.textBoxUserInputForEncryption.TabIndex = 1;
+            this.textBoxUserInputForEncryption.Text = "UserInput";
+            // 
+            // buttonTestEncryption
+            // 
+            this.buttonTestEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTestEncryption.Location = new System.Drawing.Point(627, 371);
+            this.buttonTestEncryption.Name = "buttonTestEncryption";
+            this.buttonTestEncryption.Size = new System.Drawing.Size(135, 23);
+            this.buttonTestEncryption.TabIndex = 0;
+            this.buttonTestEncryption.Text = "Test encryption";
+            this.buttonTestEncryption.UseVisualStyleBackColor = true;
+            this.buttonTestEncryption.Click += new System.EventHandler(this.buttonTestEncryption_Click);
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.button1);
@@ -111,69 +176,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(648, 342);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(687, 371);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // buttonTestEncryption
-            // 
-            this.buttonTestEncryption.Location = new System.Drawing.Point(627, 371);
-            this.buttonTestEncryption.Name = "buttonTestEncryption";
-            this.buttonTestEncryption.Size = new System.Drawing.Size(135, 23);
-            this.buttonTestEncryption.TabIndex = 0;
-            this.buttonTestEncryption.Text = "Test encryption";
-            this.buttonTestEncryption.UseVisualStyleBackColor = true;
-            this.buttonTestEncryption.Click += new System.EventHandler(this.buttonTestEncryption_Click);
-            // 
-            // textBoxUserInputForEncryption
-            // 
-            this.textBoxUserInputForEncryption.Location = new System.Drawing.Point(254, 66);
-            this.textBoxUserInputForEncryption.Name = "textBoxUserInputForEncryption";
-            this.textBoxUserInputForEncryption.Size = new System.Drawing.Size(172, 22);
-            this.textBoxUserInputForEncryption.TabIndex = 1;
-            this.textBoxUserInputForEncryption.Text = "UserInput";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(252, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(6, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 29);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(6, 179);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 29);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
-            // 
-            // textBoxResultOfEncryption
-            // 
-            this.textBoxResultOfEncryption.Location = new System.Drawing.Point(254, 106);
-            this.textBoxResultOfEncryption.Name = "textBoxResultOfEncryption";
-            this.textBoxResultOfEncryption.Size = new System.Drawing.Size(172, 22);
-            this.textBoxResultOfEncryption.TabIndex = 5;
-            this.textBoxResultOfEncryption.Text = "result";
-            // 
-            // textBoxResultOfDecryption
-            // 
-            this.textBoxResultOfDecryption.Location = new System.Drawing.Point(254, 147);
-            this.textBoxResultOfDecryption.Name = "textBoxResultOfDecryption";
-            this.textBoxResultOfDecryption.Size = new System.Drawing.Size(172, 22);
-            this.textBoxResultOfDecryption.TabIndex = 6;
             // 
             // FormGarthIPInfoSearch
             // 
