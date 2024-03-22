@@ -18,9 +18,12 @@ namespace WindowsFormsApp1
     public partial class FormGarthIPInfoSearch : System.Windows.Forms.Form
     {
 
+
         public FormGarthIPInfoSearch()
         {
             InitializeComponent();
+            textBoxUserInputForEncryption.MaxLength = 8;
+
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,19 +36,44 @@ namespace WindowsFormsApp1
 
         }
 
-        private void buttonTestEncryption_Click(object sender, EventArgs e)
+        public void buttonTestEncryption_Click(object sender, EventArgs e)
         {
-            var MySecretKey = "b14ca5898a4e413asbce2ea2315a1916";
+            var MySecretKey = "b14ca5898a4e" + textBoxUserInputForEncryption.Text +"2ea2315a1916";
 
             var encryptedString = AesOperation.EncryptString(MySecretKey, textBoxUserInputForEncryption.Text);
 
-
-            var decryptedString = AesOperation.DecryptString(MySecretKey, encryptedString);
+            textBoxResultOfEncryption.Text = encryptedString;
         }
 
         private void textBoxResultOfDecryption_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormGarthIPInfoSearch_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxResultOfEncryption_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var MySecretKey = "b14ca5898a4e" + textBoxUserInputForEncryption.Text + "2ea2315a1916";
+
+            var encryptedString = AesOperation.EncryptString(MySecretKey, textBoxUserInputForEncryption.Text);
+
+            var decryptedString = AesOperation.DecryptString(MySecretKey, textBoxResultOfEncryption.Text);
+
+            textBoxResultOfDecryption.Text = decryptedString;
+        }
+
+        public void TabEncryptionTest_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 
